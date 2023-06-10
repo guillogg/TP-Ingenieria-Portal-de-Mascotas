@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/formcss.css">
+</head>
+
+<body>
+
+    <div class="formulario" onsubmit="validarFormulario(event)">
+        <form>
+            <h3>datos de la organizacion</h3>
+            <div>
+                <label form_label>Nombre de Organizacion:<b class="campo_requerido">*</b></label>
+                <input type="text" name="org" id="org" placeholder="Como se llama tu organizacion?" required>
+            </div>
+            <br>
+
+            <div>
+                <label form_label>calle:<b class="campo_requerido">*</b></label><br>
+                <input type="text" name="calle" id="calle" placeholder="Calle" required>
+            </div>
+            <br>
+
+            <div>
+                <label form_label>altura:<b class="campo_requerido">*</b></label><br>
+                <input type="text" name="altura" id="altura" placeholder="altura" required>
+            </div>
+            <br>
+
+            <div>
+                <label form_label>partido:<b class="campo_requerido">*</b></label><br>
+                <input type="text" name="partido" id="partido" placeholder="partido" required>
+                <br>
+                <button id="verificar"> verificar direccion</button>
+            </div>
+            <br>
+
+            <div>
+                <label form_label>horarios:<b class="campo_requerido">*</b></label><br>
+                <input type="text" name="horarios" id="horarios" placeholder="10:00 - 18:00" required>
+            </div>
+            <br>
+
+            <div>
+                <label form_label>Foto:<b class="campo_requerido">*</b></label>
+                <br>
+                <input type="file" name="foto" id="foto">
+            </div>
+            <br>
+
+            <div>
+                <label form_label>telefono de tu organizacion<b class="campo_requerido">*</b>:</label>
+                <input type="number" name="telOrg" id="telOrg" placeholder="0800 000 1234">
+            </div>
+            <br>
+
+            <fieldset>
+                <legend id="as1">servicios</legend>
+                <div>
+                    <input type="checkbox" name="grupo1" value="opcion1"> Peluqueria
+                    <br>
+                    <input type="checkbox" name="grupo1" value="opcion2"> Adopcion
+                    <br>
+                    <input type="checkbox" name="grupo1" value="opcion3"> Veterinario
+                </div>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend id="as2">actividades </legend>
+                <div>
+                    <input type="checkbox" name="grupo2" value="opcion1"> colectas
+                    <br>
+                    <input type="checkbox" name="grupo2" value="opcion2"> cursos peluqueria
+                    <br>
+                    <input type="checkbox" name="grupo2" value="opcion3"> paseo
+                </div>
+            </fieldset>
+            <br>
+
+            <label form_label>descrpicion:</label>
+            <textarea id="descrpicion" name="descrpicion"
+                placeholder="Describinos que hace tu organizacion."></textarea>
+            <br>
+
+            <input type="submit" value="Enviar">
+
+        </form>
+    </div>
+
+    <script src="js/verificarDireccion.js"></script>
+    <script src="js/formOrganizacion.js"></script>
+</body>
+
+</html>
